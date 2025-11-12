@@ -1,0 +1,29 @@
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+export default function GratidaoPaula() {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-rose-100 via-purple-100 to-white text-center p-4">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="max-w-md w-full bg-white rounded-2xl shadow-lg overflow-hidden border border-rose-200"
+      >
+        <Image
+          src="/IMG-20251102-WA0004.jpg"
+          alt="Nico e Paula"
+          width={800}
+          height={1000}
+          className="object-cover w-full h-auto"
+        />
+        <div className="p-6">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            "muito obrigado por tudo. guardarei essas pequenas lembranças boas, de um alguém que uma vez me amou. peço que aceite isso como minha gratidão pelo tempo em que vivemos juntos. 🙏🏾🤍"
+          </p>
+          <p className="mt-6 text-rose-500 font-medium">Com carinho, Nico</p>
+        </div>
+      </motion.div>
+    </div>
+  )
+}
